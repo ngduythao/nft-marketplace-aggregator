@@ -1,0 +1,29 @@
+{
+  "name": "@ngduythao/nft-marketplace-aggregator",
+  "description": "This repository contains an aggregator smart contract system that enables NFT buyers to purchase NFTs from multiple sources in a single transaction. The system supports popular marketplaces such as LooksRare, Seaport, X2Y2, Sudoswap, and more.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ngduythao",
+    "url": "https://github.com/ngduythao"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7",
+    "solhint": "^3.4.0"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "forge",
+    "foundry",
+    "smart-contracts",
+    "solidity"
+  ],
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf cache out",
+    "lint": "pnpm lint:sol && pnpm prettier:check",
+    "lint:sol": "forge fmt --check && pnpm solhint \"{script,src,test}/**/*.sol\"",
+    "prettier:check": "prettier --check \"**/*.{json,md,yml}\"",
+    "prettier:write": "prettier --write \"**/*.{json,md,yml}\""
+  }
+}
